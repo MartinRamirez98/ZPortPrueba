@@ -26,7 +26,7 @@ export default function Home(props) {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Grid container direction="column" justify="center" style={{ height: 490 }} className={classes.banner}>
+            <Grid container direction="column" justify="center" style={{ height: 380 }} className={classes.banner}>
                 <Typography align="center" className={classes.bannerImage}>
                     <Box fontSize={70} fontFamily="Roboto" color="#fff" fontWeight="fontWeightBold" mb={2} className={classes.bannerImage}>
                         CONOCE NUESTROS TALLERES
@@ -66,7 +66,7 @@ export default function Home(props) {
             </Grid>
             <Grid container direction="row" style={{height:"500px"}} alignItems="center" className={classes.darkBG}>
                 <Grid item>
-                    <Typography >
+                    <Typography style={{marginLeft:35}}>
                     <Box fontSize={35} fontFamily="Roboto" color="#fff" fontWeight="fontWeightBold">
                         No te pierdas nuestros proximos talleres:
                         </Box>

@@ -1,9 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
+import fondo from '../../Assets/Images/fondo.jpg'
 
 export const useStyles = makeStyles((theme) => ({
     banner:{
       backgroundImage: 'linear-gradient(to right, #4a0674 , #1c4172)',
     },  
+    bannerImage:{
+      backgroundImage: "url(" + fondo + ")"
+    },
     darkBG:{
       backgroundColor:'#10042f',
       color:'#fff'
