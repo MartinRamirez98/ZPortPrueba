@@ -48,4 +48,13 @@ export const useStyles = makeStyles((theme) => ({
         display:'none',
       }
     },
+    menuIcon:{
+      [theme.breakpoints.up('sm')]:{
+        display:'none',
+      },
+      [theme.breakpoints.down('sm')]:{
+        display:'block',
+      }
+      
+    }
 }));

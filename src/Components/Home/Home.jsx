@@ -30,7 +30,7 @@ export default function Home(props) {
 
     const handleViewBundles =()=>{
         props.history.push({
-            
+            pathname:"/bundles"
         })
     }
 
@@ -155,7 +155,7 @@ export default function Home(props) {
                         {videosProx ? videosProx.map((x) => (
                             <Grid item className={classes.flex} style={{ height: 440 }}>
                                 <Card className={classes.flex} >
-                                    <CardActionArea>
+                                    <CardActionArea onClick={()=>handleMoreInfo(x)}>
                                         <CardHeader
                                             title={x.tema}
                                             subheader={"Mentor: " + x.profesor + " - Fecha: " + x.fecha}
@@ -212,7 +212,7 @@ export default function Home(props) {
                         {videosPrev ? videosPrev.map((x) => (
                             <Grid item className={classes.flex} style={{ height: 440 }}>
                                 <Card className={classes.flex} >
-                                    <CardActionArea>
+                                    <CardActionArea onClick={()=>handleMoreInfo(x)}>
                                         <CardHeader
                                             title={x.tema}
                                             subheader={"Mentor: " + x.profesor + " - Fecha: " + x.fecha}

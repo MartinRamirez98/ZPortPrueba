@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import {
-    AppBar,
-    Toolbar,
-    Typography,
-    CssBaseline,
-    Link,
-    Grid,
-    Box,
-    Button,
+    AppBar, Toolbar, Typography, CssBaseline, Link, Grid, Box, Button,
+    IconButton, SwipeableDrawer, List, ListItem, ListItemText,
 } from "@material-ui/core";
+import clsx from 'clsx'
 import { useStyles } from "./Appbar.module";
 import logo2 from "../../Assets/Images/logo2.png"
 import { useHistory } from 'react-router-dom';
 import ls from 'local-storage'
+import ReorderIcon from '@material-ui/icons/Reorder';
 
 export default function Appbar(props) {
     const [isLogged, setIsLogged] = useState()
+    const [state, setState] = React.useState({
+        top: false,
+      });
     useEffect(() => {
         setIsLogged(ls.get('isLogged'))
         console.log(isLogged);
@@ -45,6 +44,33 @@ export default function Appbar(props) {
         window.open(link, "_blank")
     }
 
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+          return;
+        }
+    
+        setState({ ...state, [anchor]: open });
+      };
+
+    const list = (anchor) => (
+        <div
+          className={clsx(classes.list, {
+            [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+          })}
+          role="presentation"
+          onClick={toggleDrawer(anchor, false)}
+          onKeyDown={toggleDrawer(anchor, false)}
+        >
+          <List>
+            {['Talleres ZPORT', 'Conviértete en mentor', 'Sobre ZPORT', 'Encuentra un especialista para ti'].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </div>
+      ); 
+
     return (
         <div>
             <CssBaseline />
@@ -61,7 +87,7 @@ export default function Appbar(props) {
                         <Grid item xs={10} container justify="space-between" alignItems="center">
                             <Grid item xs={2}>
                                 <Typography align="center" onClick={() => goToTalleres()} className={classes.toolbarItem}>
-                                        Talleres ZPORT
+                                    Talleres ZPORT
                                 </Typography>
 
                             </Grid>
@@ -91,6 +117,19 @@ export default function Appbar(props) {
                                 </Button>
                                 }
 
+                            </Grid>
+                            <Grid item xs={0} md={1} className={classes.menuIcon}>
+                                <IconButton onClick={toggleDrawer('top', true)} color="primary" aria-label="drawer" component="span">
+                                    <ReorderIcon />
+                                </IconButton>
+                                <SwipeableDrawer
+                                    anchor="top"
+                                    open={state['top']}
+                                    onClose={toggleDrawer('top', false)}
+                                    onOpen={toggleDrawer('top', true)}
+                                >
+                                    {list('top')}
+                                </SwipeableDrawer>
                             </Grid>
                         </Grid>
                     </Grid>

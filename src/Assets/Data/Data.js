@@ -42,25 +42,29 @@ export const videosPrev = [
         tema:"Técnicas para una partida rápida",
         url:"https://www.youtube.com/watch?v=FazJGzVx-xM",
         fecha:"20/04/2020",
-        profesor:"Juan Perez"
+        profesor:"Juan Perez",
+        descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         tema:"Técnicas respiratorias para la natación",
         url:"https://www.youtube.com/watch?v=VwVMG7BKYEs",
         fecha:"18/04/2020",
-        profesor:"Javier Quintana"
+        profesor:"Javier Quintana",
+        descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         tema:"Marcación eficiente en el basquetbol",
         url:"https://www.youtube.com/watch?v=jkUIhnMP8PQ",
         fecha:"11/02/2020",
-        profesor:"Renzo Montenegro"
+        profesor:"Renzo Montenegro",
+        descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         tema:"Técnicas respiratorias para la natación",
         url:"https://www.youtube.com/watch?v=VwVMG7BKYEs",
         fecha:"18/04/2020",
-        profesor:"Javier Quintana"
+        profesor:"Javier Quintana",
+        descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
 ]
 
@@ -89,4 +93,44 @@ export const resenas=[
         resena:"Con estas tecnicas puestas en practica, he podido mejorar mis tiempos de partida. Muchas gracias!",
         calificacion:5
     },
+]
+
+export const paquetes=[
+    {
+        titulo:"Taller",
+        cantTaller:1,
+        costoSoles:30,
+    },
+    {
+        titulo:"Talleres",
+        cantTaller:5,
+        costoSoles:125,
+    },
+    {
+        titulo:"Talleres",
+        cantTaller:10,
+        costoSoles:225,
+    },
+]
+
+export const membresias=[
+    {
+        titulo:"Mes",
+        cantMes:1,
+        cantTaller:1,
+        costoSoles:100       
+    },
+    {
+        titulo:"Meses + 2 sesiones",
+        cantMes:6,
+        cantTaller:3,
+        costoSoles:500       
+    },
+    {
+        titulo:"Meses + 5 sesiones",
+        cantMes:12,
+        cantTaller:6,
+        costoSoles:900       
+    },
+
 ]
