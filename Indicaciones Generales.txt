@@ -13,4 +13,4 @@ Indicaciones del funcionamiento de la página:
 	-Hay un botón de inicio de sesión que simulará un logeo de un usuario 
 	-Cada vez que compras un paquete o te inscribes a una membresía, se sumarán la cantidad de talleres a los que puedes inscribirte
 	-La cantdad de talleres a los que puedes inscribirte la podrás ver al momento de inscribirte a un taller mediante un modal (popup).
-	-La página es responsive, por lo que también se podrá ver desde un celular
+	-La página es responsive, por lo que también se podrá ver desde un celular (Probado en IPhone 11 -> para pantallas más angostas podría requerir modificación)
