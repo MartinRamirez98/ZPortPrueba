@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import {
-    Toolbar, Typography, CssBaseline, Grid, Button, Card, CardMedia,
-    CardContent, CardActions, CardHeader, Collapse, CardActionArea, Link, Box,
-    Avatar, IconButton
+    Typography, Grid, Button, Card, CardMedia,
+    CardContent, CardActions, Box,
 } from "@material-ui/core";
 import { useStyles } from "./Bundles.module";
 import "react-multi-carousel/lib/styles.css";

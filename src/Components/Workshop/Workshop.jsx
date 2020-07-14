@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import {
     Typography, Grid, Button, Box

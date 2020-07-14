@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import {
-    Toolbar, Typography, CssBaseline, Grid, Button, Card, CardMedia,
-    CardContent, CardActions, CardHeader, Collapse, CardActionArea, Link, Box,
-    Avatar, IconButton
+    Typography, CssBaseline, Grid, Button, Card, CardContent, CardActions,
+    CardHeader, CardActionArea, Box, Avatar, 
 } from "@material-ui/core";
-import clsx from 'clsx';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { useStyles } from "./Home.module";
 import { responsive, responsiveLarge } from '../../Assets/Data/Misc'
 import { videosProx, videosPrev, resenas } from '../../Assets/Data/Data'
-import { isBrowser, isMobile, isTablet } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReactPlayer from 'react-player'
