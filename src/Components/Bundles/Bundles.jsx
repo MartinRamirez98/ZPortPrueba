@@ -16,7 +16,7 @@ export default function Bundles(props) {
     const classes = useStyles();
 
     const buyBundle = (x) => {
-        const mensaje="Desea comprar el paquete de "+x.titulo+" por S/ "+x.costoSoles+"?"
+        const mensaje="Desea comprar el paquete de "+x.cantTaller+" "+x.titulo+" por S/ "+x.costoSoles+"?"
         if (ls.get('isLogged')) {
             Swal
                 .fire({

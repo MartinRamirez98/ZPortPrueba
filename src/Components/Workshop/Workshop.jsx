@@ -15,7 +15,7 @@ export default function Workshop(props) {
     const show = props.history.location.state.show
     const handleSubscription = () => {
         const numTal = ls.get('talleres') || 0
-        const tema = "Cuentas con " + numTal + " inscripciones disponibles. ¿Está seguro que desea inscibirse al taller: " + video.tema + "?";
+        const tema = "Cuenta con " + numTal + " inscripciones disponibles. ¿Está seguro que desea inscibirse al taller: " + video.tema + "?";
         console.log(tema);
 
         if (ls.get('isLogged')) {
