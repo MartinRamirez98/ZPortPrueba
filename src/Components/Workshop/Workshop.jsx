@@ -12,12 +12,12 @@ import Swal from 'sweetalert2';
 export default function Workshop(props) {
     const classes = useStyles();
     const video = props.history.location.state.video
-
+    const show = props.history.location.state.show
     const handleSubscription = () => {
-        const numTal=ls.get('talleres')||0
-        const tema = "Cuentas con "+numTal+" inscripciones disponibles. ¿Está seguro que desea inscibirse al taller: " +video.tema+ "?";
+        const numTal = ls.get('talleres') || 0
+        const tema = "Cuentas con " + numTal + " inscripciones disponibles. ¿Está seguro que desea inscibirse al taller: " + video.tema + "?";
         console.log(tema);
-        
+
         if (ls.get('isLogged')) {
             Swal
                 .fire({
@@ -29,24 +29,24 @@ export default function Workshop(props) {
                 })
                 .then(async (result) => {
                     if (result.value) {
-                        const numTalleres=ls.get('talleres')
-                        if(numTalleres>0){
-                            ls.set('talleres',numTalleres-1);
+                        const numTalleres = ls.get('talleres')
+                        if (numTalleres > 0) {
+                            ls.set('talleres', numTalleres - 1);
                             Swal.fire({
-                                title: "OK",
-                                text: "Se inscribió correctamente",
+                                title: "¡Gracias!",
+                                text: "Te llegará un correo con los detalles del taller",
                                 icon: "success",
                                 confirmButtonText: "Aceptar",
                             })
-                        }else{
+                        } else {
                             Swal.fire({
                                 title: "Error",
                                 text: "No cuenta con ningun taller disponible, por favor revise nuestros paquetes",
                                 icon: "error",
-                            }).then(async(result)=>{
-                                if(result.value){
+                            }).then(async (result) => {
+                                if (result.value) {
                                     props.history.push({
-                                        pathname:"/bundles",
+                                        pathname: "/bundles",
                                     })
                                 }
                             });
@@ -78,6 +78,7 @@ export default function Workshop(props) {
                     <Grid item xs={12} md={7} style={{ height: "450px" }}>
                         <ReactPlayer
                             url={video.url}
+                            controls={true}
                             light={true}
                             height="100%"
                             width="95%"
@@ -97,20 +98,23 @@ export default function Workshop(props) {
                             </Box>
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} >
-                        <Typography align="center" style={{ marginLeft: 35, marginTop: 45 }}>
-                            <Box fontSize={30} fontFamily="Roboto" color="#fff" fontWeight="fontWeightBold">
-                                ¡Inscríbete aquí!
-                    </Box>
-                        </Typography>
-
-                    </Grid>
-                    <Grid item xs={12} style={{ marginBottom: 30 }}>
-                        <Button onClick={() => handleSubscription()} className={classes.darkButton} style={{ marginLeft: 25 }}>
-                            Inscripciones
-                </Button>
-
-                    </Grid>
+                    {show ?
+                    <React.Fragment>
+                        <Grid item xs={12} >
+                            <Typography align="center" style={{ marginLeft: 35, marginTop: 45 }}>
+                                <Box fontSize={30} fontFamily="Roboto" color="#fff" fontWeight="fontWeightBold">
+                                    ¡Inscríbete aquí!
+                                </Box>
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} style={{ marginBottom: 30 }}>
+                            <Button onClick={() => handleSubscription()} className={classes.darkButton} style={{ marginLeft: 25 }}>
+                                Inscripciones
+                            </Button>
+                        </Grid>
+                    </React.Fragment>
+                    : null
+                    }
                 </Grid>
             </Grid >
         </div>

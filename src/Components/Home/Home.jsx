@@ -20,10 +20,13 @@ import ReactStars from "react-rating-stars-component";
 export default function Home(props) {
     const classes = useStyles();
 
-    const handleMoreInfo =(video)=>{
+    const handleMoreInfo =(video,show)=>{
         props.history.push({
             pathname:"/workshopInfo",
-            state:{video:video}
+            state:{
+                video:video,
+                show:show,
+            }
         })
         console.log(props);
     }
@@ -155,7 +158,7 @@ export default function Home(props) {
                         {videosProx ? videosProx.map((x) => (
                             <Grid item className={classes.flex} style={{ height: 440 }}>
                                 <Card className={classes.flex} >
-                                    <CardActionArea onClick={()=>handleMoreInfo(x)}>
+                                    <CardActionArea onClick={()=>handleMoreInfo(x,true)}>
                                         <CardHeader
                                             title={x.tema}
                                             subheader={"Mentor: " + x.profesor + " - Fecha: " + x.fecha}
@@ -172,7 +175,7 @@ export default function Home(props) {
                                     </CardContent>
                                     <CardActions disableSpacing>
                                         <Grid container direction="column" justify="center">
-                                        <Button onClick={()=>handleMoreInfo(x)}>
+                                        <Button onClick={()=>handleMoreInfo(x,true)}>
                                             Más Información
                                         </Button>
                                         </Grid>
@@ -212,7 +215,7 @@ export default function Home(props) {
                         {videosPrev ? videosPrev.map((x) => (
                             <Grid item className={classes.flex} style={{ height: 440 }}>
                                 <Card className={classes.flex} >
-                                    <CardActionArea onClick={()=>handleMoreInfo(x)}>
+                                    <CardActionArea onClick={()=>handleMoreInfo(x,false)}>
                                         <CardHeader
                                             title={x.tema}
                                             subheader={"Mentor: " + x.profesor + " - Fecha: " + x.fecha}
@@ -229,7 +232,7 @@ export default function Home(props) {
                                     </CardContent>
                                     <CardActions disableSpacing>
                                         <Grid container direction="column" justify="center">
-                                        <Button onClick={()=>handleMoreInfo(x)}>
+                                        <Button onClick={()=>handleMoreInfo(x,false)}>
                                             Más Información
                                         </Button>
                                         </Grid>

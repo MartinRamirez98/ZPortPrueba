@@ -59,7 +59,45 @@ export default function Bundles(props) {
     }
 
     const buyMembership =(x)=>{
-
+        const mensaje="Desea comprar el paquete de "+x.cantMes+" "+x.titulo+" por S/ "+x.costoSoles+"?"
+        if (ls.get('isLogged')) {
+            Swal
+                .fire({
+                    title: "Confirmar Compra",
+                    text: mensaje,
+                    showCancelButton: true,
+                    confirmButtonText: "Aceptar",
+                    cancelButtonText: "Cancelar",
+                })
+                .then(async (result) => {
+                    if (result.value) {
+                        const numTalleres=ls.get('talleres')
+                        if(numTalleres){
+                            ls.set('talleres',numTalleres+x.cantTaller);
+                            Swal.fire({
+                                title: "OK",
+                                text: "Se realizo la compra correctamente",
+                                icon: "success",
+                                confirmButtonText: "Aceptar",
+                            })
+                        }else{
+                            ls.set('talleres',x.cantTaller);
+                            Swal.fire({
+                                title: "OK",
+                                text: "Se realizo la compra correctamente",
+                                icon: "success",
+                                confirmButtonText: "Aceptar",
+                            })
+                        }
+                    }
+                });
+        } else {
+            Swal.fire({
+                title: "Error",
+                text: "Debe logearse para poder realizar la inscripción",
+                icon: "error",
+            });
+        }
     }
 
     return (

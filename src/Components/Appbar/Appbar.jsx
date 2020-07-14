@@ -52,6 +52,24 @@ export default function Appbar(props) {
         setState({ ...state, [anchor]: open });
       };
 
+    const dispatchListAction =(index)=>{
+        console.log(index);
+        switch (index){
+            case 0: 
+                goToTalleres();
+                break;
+            case 1: 
+                handleTitleClick("https://www.zport.org/quiero-ser-mentor");
+                break;
+            case 2: 
+                handleTitleClick("https://www.zport.org/faq");
+                break;
+            case 3: 
+                handleTitleClick("https://www.zport.org/mentores");
+                break;
+        } 
+    }
+
     const list = (anchor) => (
         <div
           className={clsx(classes.list, {
@@ -63,7 +81,7 @@ export default function Appbar(props) {
         >
           <List>
             {['Talleres ZPORT', 'Conviértete en mentor', 'Sobre ZPORT', 'Encuentra un especialista para ti'].map((text, index) => (
-              <ListItem button key={text}>
+              <ListItem button key={text} onClick={()=>dispatchListAction(index)}>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
