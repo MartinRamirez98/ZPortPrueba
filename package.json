@@ -10,8 +10,11 @@
     "@testing-library/user-event": "^7.2.1",
     "local-storage": "^2.0.0",
     "react": "^16.13.1",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-multi-carousel": "^2.5.5",
+    "react-player": "^2.5.0",
+    "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "sweetalert2": "^9.15.3"
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-video-thumbnail": "^0.1.3"
   }
 }

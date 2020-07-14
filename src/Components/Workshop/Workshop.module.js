@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
       color:'#fff'
     },
     darkButton:{
-      backgroundImage: 'linear-gradient(to right, #c700ff , #03fbf8)',
+      backgroundColor:'#10042f',
       cursor: 'pointer',
       borderRadius: '40px',
       color: '#fff',
