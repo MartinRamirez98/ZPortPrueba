@@ -148,7 +148,7 @@ export default function Bundles(props) {
                     <Grid item xs={12}>
                         <Typography align="left" style={{ marginLeft: 35, marginTop: 25 }}>
                             <Box fontSize={25} fontFamily="Roboto" color="#fff" fontWeight="fontWeightBold" mb={2}>
-                                ... O suscribete a una membresía
+                                ... O suscríbete a una membresía
                             </Box>
                         </Typography>
                     </Grid>
