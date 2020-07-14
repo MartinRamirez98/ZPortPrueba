@@ -51,7 +51,7 @@ export default function Bundles(props) {
         } else {
             Swal.fire({
                 title: "Error",
-                text: "Debe logearse para poder realizar la inscripción",
+                text: "Debe logearse para poder realizar la compra",
                 icon: "error",
             });
         }
@@ -93,7 +93,7 @@ export default function Bundles(props) {
         } else {
             Swal.fire({
                 title: "Error",
-                text: "Debe logearse para poder realizar la inscripción",
+                text: "Debe logearse para poder realizar la compra",
                 icon: "error",
             });
         }
