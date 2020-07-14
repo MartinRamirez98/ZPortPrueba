@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ZPortPrueba/static/css/main.5f361e03.chunk.css",
+    "main.js": "/ZPortPrueba/static/js/main.f1c2b0a1.chunk.js",
+    "main.js.map": "/ZPortPrueba/static/js/main.f1c2b0a1.chunk.js.map",
+    "runtime-main.js": "/ZPortPrueba/static/js/runtime-main.55f4a098.js",
+    "runtime-main.js.map": "/ZPortPrueba/static/js/runtime-main.55f4a098.js.map",
+    "static/css/2.3ed17740.chunk.css": "/ZPortPrueba/static/css/2.3ed17740.chunk.css",
+    "static/js/2.5ef72f66.chunk.js": "/ZPortPrueba/static/js/2.5ef72f66.chunk.js",
+    "static/js/2.5ef72f66.chunk.js.map": "/ZPortPrueba/static/js/2.5ef72f66.chunk.js.map",
+    "index.html": "/ZPortPrueba/index.html",
+    "precache-manifest.f6b2192d950cdbc039cedf6435620c86.js": "/ZPortPrueba/precache-manifest.f6b2192d950cdbc039cedf6435620c86.js",
+    "service-worker.js": "/ZPortPrueba/service-worker.js",
+    "static/css/2.3ed17740.chunk.css.map": "/ZPortPrueba/static/css/2.3ed17740.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/ZPortPrueba/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5ef72f66.chunk.js.LICENSE.txt": "/ZPortPrueba/static/js/2.5ef72f66.chunk.js.LICENSE.txt",
+    "static/media/fondo.jpg": "/ZPortPrueba/static/media/fondo.31155777.jpg",
+    "static/media/logo2.png": "/ZPortPrueba/static/media/logo2.38c2abff.png",
+    "static/media/membresia.jpg": "/ZPortPrueba/static/media/membresia.e5b86756.jpg",
+    "static/media/styles.css": "/ZPortPrueba/static/media/revicons.2feb69cc.eot",
+    "static/media/taller.jpg": "/ZPortPrueba/static/media/taller.2413e3b8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55f4a098.js",
+    "static/css/2.3ed17740.chunk.css",
+    "static/js/2.5ef72f66.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.f1c2b0a1.chunk.js"
+  ]
+}
